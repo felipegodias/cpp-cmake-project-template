@@ -1,13 +1,13 @@
 project(HelloWorld.Launcher CXX)
 
-set(HELLO_WORLD_LAUNCHER_SRC)
+set(PROJECT_SRC)
 
 add_subdirectory("Src")
 
-list(SORT HELLO_WORLD_LAUNCHER_SRC)
-message("\n::::: Hello World Launcher Source Files Start :::::")
-foreach(SRC_FILE IN LISTS HELLO_WORLD_LAUNCHER_SRC)
+list(SORT PROJECT_SRC)
+message("\n::::: ${PROJECT_NAME} Source Files Start :::::")
+foreach(SRC_FILE IN LISTS PROJECT_SRC)
     message(${SRC_FILE})
 endforeach()
 
-add_executable(HelloWorld.Launcher ${HELLO_WORLD_LAUNCHER_SRC})
+add_executable(${PROJECT_NAME} ${PROJECT_SRC})
